@@ -1,0 +1,40 @@
+.footer {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    background-color: $color-primary;
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(1fr max-content));
+
+    &__left {
+        grid-column: 2 / 3;
+
+        h3 {
+            border-bottom: 1px solid #a9a9a9;  
+            margin-bottom: .4rem;         
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__right {
+        grid-column: 5 / 6;
+
+        .icons i {
+            font-size: 4rem;
+            color: #fff;            
+            margin-right: 1rem;            
+                       
+         }
+         .icons i:hover {
+             color: orangered;
+         }
+
+    }
+
+}

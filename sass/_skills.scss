@@ -1,0 +1,42 @@
+.skills {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(min-content,1fr));
+    justify-items: center;
+    grid-row-gap: 1.5rem;
+    margin-bottom: 12rem;
+
+
+    @media only screen and (max-width: $medium-screen) {
+        grid-template-columns: repeat(4,  minmax(min-content, 1fr));
+    }
+
+
+    @media only screen and (max-width: $small-screen) {
+        grid-template-columns: repeat(3,  minmax(min-content, 1fr));
+    }
+
+    @media only screen and (max-width: $xs-screen) {
+        grid-template-columns: repeat(2,  minmax(min-content, 1fr));
+    }
+
+   
+
+     &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+
+        i {
+            margin-right: .3rem;
+        }
+     }
+
+     &__heading {
+         grid-column: 1 / -1;
+         align-self: center;
+     }
+}

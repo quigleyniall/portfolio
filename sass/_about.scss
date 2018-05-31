@@ -1,0 +1,17 @@
+.about-me {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    text-align: center;    
+    background-image: linear-gradient(to right,rgba(#fff, 0.8), rgba(#fff, 0.8)), url("../images/chris-liverani-401112-unsplash.jpg");
+    background-position: top;
+    background-size: cover;
+    
+
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+
+     &__desc {
+        grid-column: 3/7;
+     }
+}
