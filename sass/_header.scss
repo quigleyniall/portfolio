@@ -17,6 +17,10 @@
         @media only screen and (max-width: $medium-screen) {
             grid-column: col-start 1 / col-end 3;
         }
+        @media only screen and (max-width: $xs-screen) {
+            grid-column: col-start 2 / col-end 10;
+            grid-row: 1/2;
+        }
     }
 
     &__right {
