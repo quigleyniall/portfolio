@@ -53,6 +53,10 @@ p {
     @media only screen and (max-width: 56.25em) {
       .header__left {
         grid-column: col-start 1 / col-end 3; } }
+    @media only screen and (max-width: 31.25em) {
+      .header__left {
+        grid-column: col-start 2 / col-end 10;
+        grid-row: 1/2; } }
   .header__right {
     grid-column: col-start 7 / col-end 10;
     grid-row: 1/2;
@@ -97,7 +101,7 @@ p {
     padding: 1rem 2rem; }
   .btn--large {
     font-size: 1.8rem;
-    padding: 1.8rem 3.7rem; }
+    padding: 1rem 2rem; }
     @media only screen and (max-width: 56.25em) {
       .btn--large {
         font-size: 1rem;
