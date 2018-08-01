@@ -22,12 +22,24 @@ body {
   font-weight: 600;
   letter-spacing: 3px;
   line-height: 1; }
+  @media only screen and (max-width: 56.25em) {
+    .heading-1 {
+      font-size: 3rem; } }
 
 .heading-2 {
   color: #5831ff;
   font-weight: 700;
   letter-spacing: 2px;
   font-size: 3rem; }
+
+.main-heading-2 {
+  color: #5831ff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 3rem; }
+  @media only screen and (max-width: 56.25em) {
+    .main-heading-2 {
+      font-size: 1.5rem; } }
 
 p {
   font-size: 1.5rem;
@@ -54,6 +66,9 @@ p {
     position: absolute;
     right: 5vw;
     top: 30vh; }
+    @media only screen and (max-width: 56.25em) {
+      .header__right {
+        top: 20vh; } }
     @media only screen and (max-width: 37.5em) {
       .header__right {
         width: 100%;
@@ -171,18 +186,28 @@ p {
   .skills__flex-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
   .skills__item {
     font-size: 2rem;
     width: 24%;
     padding: 2rem; }
-    .skills__item i {
-      margin-right: .3rem; }
-    .skills__item span {
-      display: block; }
     @media only screen and (max-width: 37.5em) {
       .skills__item {
-        width: 49%; } }
+        padding: .7rem; } }
+    .skills__item i {
+      margin-right: .3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .skills__item i {
+          margin-right: .1rem; } }
+    .skills__item span {
+      display: block; }
+    @media only screen and (max-width: 56.25em) {
+      .skills__item {
+        width: 30%; } }
+    @media only screen and (max-width: 37.5em) {
+      .skills__item {
+        width: 47%; } }
   .skills__heading {
     display: block;
     width: 100%; }
@@ -196,6 +221,9 @@ p {
     width: 28%;
     display: inline-block;
     margin: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .projects__details {
+        width: 40%; } }
     @media only screen and (max-width: 37.5em) {
       .projects__details {
         width: 90%; } }

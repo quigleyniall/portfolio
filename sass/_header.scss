@@ -30,6 +30,9 @@
         right: 5vw;
         top: 30vh;
 
+        @media only screen and (max-width: $medium-screen) {
+          top: 20vh;
+        }
         @media only screen and (max-width: $small-screen) {
           width: 100%;
           display: block;

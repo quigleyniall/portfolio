@@ -9,6 +9,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
     }
 
 
@@ -27,16 +28,28 @@
         width: 24%;
         padding: 2rem;
 
+        @media only screen and (max-width: $small-screen) {
+          padding: .7rem;
+        }
+
         i {
             margin-right: .3rem;
+            @media only screen and (max-width: $small-screen) {
+              margin-right: .1rem;
+            }
         }
         span {
           display: block;
         }
 
-        @media only screen and (max-width: $small-screen) {
-          width: 49%;
+        @media only screen and (max-width: $medium-screen) {
+          width: 30%;
         }
+
+        @media only screen and (max-width: $small-screen) {
+          width: 47%;
+        }
+
      }
 
      &__heading {
