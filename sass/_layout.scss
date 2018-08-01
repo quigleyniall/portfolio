@@ -15,7 +15,7 @@ $xs-screen: 31.25em; //500
 }
 
 html {
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-size: 62.5%; //1 rem = 10px
 
     @media only screen and (max-width: $large-screen) {
@@ -30,9 +30,5 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 100vh 100vh 100vh repeat(2, min-content) min-content;
-
-    
+   
 }

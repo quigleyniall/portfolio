@@ -1,23 +1,21 @@
 .contact {
-    grid-column: 1 / -1;
     font-family: inherit;
     background-image: linear-gradient(to right,rgba(#fff, 0.8), rgba(#fff, 0.8)), url("../images/mirza-babar-baig-640530-unsplash.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    display: grid;
-    grid-template-columns: 5rem 1fr 1fr 5rem;
-    align-content: center;
 
     @media only screen and (max-width: $small-screen) {
         background-image: none;
     }
 
     &__heading {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
-        text-align: center;
         color: $color-primary;
         font-weight: 700;
         letter-spacing: 2px;
@@ -25,17 +23,12 @@
     }
 
     &__form {
-        grid-column: 2/4;
-        grid-row: 1/2;
-        display: flex;
-        flex-direction: column;
+        display: inline-block;
         width: 50%;
-        padding: 5rem;
-        position: relative;
-        align-self: center;
-        justify-self: center;
-        color: $color-secondary;    
-        
+        padding: 0 5rem 5rem 5rem;
+        color: $color-secondary;
+        text-align: left;
+
         @media only screen and (max-width: $medium-screen) {
             width: 70%;
         }
@@ -43,7 +36,7 @@
         @media only screen and (max-width: $small-screen) {
             width: 95%;
             padding: 5rem 0;
-            
+
         }
 
         & > * {
@@ -58,7 +51,7 @@
         label {
             font-size: 1.6rem;
         }
-    }   
+    }
 
-   
+
 }
