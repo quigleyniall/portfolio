@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:3000/soldier -->
+<html lang="en"><div id="justunblock_chrome_detect"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+</style><style type="text/css">*{
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.app {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav-links {
+  width: 100%;
+  background-color: #2f261e;
+  text-align: center;
+}
+.main-link {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  padding: 2rem 4rem;
+  background-color: #2f261e;
+  color: white;
+  font-weight: 600;
+}
+
+.main-link:hover {
+  color: gold;
+  font-weight: 800;
+}
+.main-background {
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  position: relative;
+}
+
+.gear {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #2f261e;
+  color: white;
+  font-weight: 900;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.mission {
+  position: absolute;
+  top: 8%;
+  left: 60%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+}
+
+.mission-title {
+  font-size: 3rem;
+  line-height: 1rem;
+  font-weight: 900;
+}
+
+.mission-area {
+  font-size: 1.5rem;
+  line-height: 1rem;
+  font-weight: 500;
+  -webkit-transform: skew(15deg);
+      -ms-transform: skew(15deg);
+          transform: skew(15deg);
+}
+
+table {
+  color: white;
+  border: 1px solid white;
+  background: black;
+  opacity: 0.9;
+  padding: 2rem 2.5rem;
+}
+
+td {
+  padding: 5px;
+}
+
+.mission-details {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  color: white;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: inline-block;
+}
+
+.intel {
+  background-image: url("http://1.bp.blogspot.com/-U1srKBenRW0/VK5oekUox8I/AAAAAAAAANo/DSk3lMxz8w0/s1600/military%2Bcommunication1.jpg");
+  background-size: cover;
+  background-position: center;
+  outline: none;
+  display: inline-block;
+  margin: 0 2rem;
+  height: 200px;
+  width: 300px;
+  float: right;
+  position: relative;
+}
+
+.intel:hover {
+    background-image: -webkit-radial-gradient(grey, darkgrey, transparent), url("http://1.bp.blogspot.com/-U1srKBenRW0/VK5oekUox8I/AAAAAAAAANo/DSk3lMxz8w0/s1600/military%2Bcommunication1.jpg");
+    background-image: -o-radial-gradient(grey, darkgrey, transparent), url("http://1.bp.blogspot.com/-U1srKBenRW0/VK5oekUox8I/AAAAAAAAANo/DSk3lMxz8w0/s1600/military%2Bcommunication1.jpg");
+    background-image: radial-gradient(grey, darkgrey, transparent), url("http://1.bp.blogspot.com/-U1srKBenRW0/VK5oekUox8I/AAAAAAAAANo/DSk3lMxz8w0/s1600/military%2Bcommunication1.jpg");
+}
+
+.intel:hover .intel-span {
+  opacity: 1;
+}
+
+.loadout {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBhhJrq1J4NqXp_Ng32GBuIuRvJ7V1Egm1AUDbQ6vqhgJsGsg");
+  background-size: cover;
+  background-position: center;
+  outline: none;
+  height: 200px;
+  width: 300px;
+  display: inline-block;
+  position: relative;
+}
+
+.loadout:hover .loadout-span {
+  opacity:1;
+}
+
+.loadout:hover {
+  background-image: -webkit-radial-gradient(grey,darkgrey, transparent), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBhhJrq1J4NqXp_Ng32GBuIuRvJ7V1Egm1AUDbQ6vqhgJsGsg");
+  background-image: -o-radial-gradient(grey,darkgrey, transparent), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBhhJrq1J4NqXp_Ng32GBuIuRvJ7V1Egm1AUDbQ6vqhgJsGsg");
+  background-image: radial-gradient(grey,darkgrey, transparent), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIBhhJrq1J4NqXp_Ng32GBuIuRvJ7V1Egm1AUDbQ6vqhgJsGsg");
+}
+
+.loadout-span, .intel-span {
+  opacity: 0;
+  -webkit-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+  font-size: 2rem;
+}
+
+.mission-intel, .loadout-weapons {
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.objectives {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.mission-type {
+  font-weight: 700;
+  color: #eee;
+}
+
+.loadout-gear {
+  width: 30%;
+  float: left;
+}
+.gear {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: #2f261e;
+  color: white;
+  font-weight: 800;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.gear:hover, .gear:active{
+  border: 2px solid #665b42;
+}
+
+.loadout-info {
+  width: 70%;
+  display: inline-block;
+  float: right;
+  text-align: center;
+}
+
+.weapons {
+  width: 30%;
+  display: inline-block;
+}
+
+.primary-weapons {
+  width: 50%;
+  display: inline-block;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.secondary-weapons {
+  width: 50%;
+  display: inline-block;
+  float: right;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.primary-weapons:hover:not(.active), .secondary-weapons:hover:not(.active) {
+  border: 2px solid #665b42;
+}
+
+.secondary-weapons:after {
+  display: table;
+  content: "";
+  float: none;
+}
+
+.supplies-items {
+  width: 50%;
+  display: inline-block;
+}
+
+.perks-items {
+  width: 50%;
+  display: inline-block;
+}
+
+.weapon-thumbnail {
+  width: 200px;
+  height: 200px;
+}
+.weapon-details {
+  text-align: left;
+}
+
+.weapons-info {
+  float: right;
+  width: 70%;
+  display: inline-block;
+}
+.weapon-info {
+  position: relative;
+  display: inline-block;
+}
+.weapon-info-details {
+  text-align: left;
+  margin-left: 2rem;
+}
+.weapon-title, .weapon-name {
+  font-weight: 700;
+  padding: 1rem 3rem;
+}
+
+.weapon-title:hover {
+  background-color: #2f261e;
+  border: 2px solid #665b42;
+  color: white;
+}
+.weapon-image {
+  width: 400px;
+  height: 400px;
+}
+.weapon-stats {
+  position: absolute;
+  text-align: left;
+  left: 60%;
+  top: 70%;
+  z-index: 1;
+}
+
+
+
+.empty-rect {
+  width: 100px;
+  height: 1rem;
+  z-index: 2;
+  position: absolute;
+  border: 1px solid #eee;
+}
+
+.fill-rect {
+  height: 1rem;
+  z-index: 3;
+  position: absolute;
+  background-color: grey;
+}
+
+.soldier {
+  float: right;
+  width: 20%;
+  text-align: center;
+}
+
+.user-tag {
+  position: relative;
+}
+
+.user-level {
+  margin: 0 auto;
+}
+.username {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.level {
+  border-top: 1px solid #d2b711;
+  border-bottom: 1px solid #d2b711;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #d2b711;
+}
+
+.stat-level {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.stats {
+  display: inline-block;
+  width: 50%;
+  padding-left: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+}
+
+.stat {
+  font-size: 1.3rem;
+}
+
+.stat-heading {
+ color: #d2b711;
+ text-transform: uppercase;
+ font-size: .8rem;
+}
+.perk {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.perk:hover {
+  outline: 2px solid #d2b711;
+  cursor: pointer;
+}
+
+
+.perk-image {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+.perk1 {
+  background: url("https://vignette.wikia.nocookie.net/callofduty/images/9/98/C4_x2_Perk_CoD4.png/revision/latest?cb=20110409190540");
+  background-size: cover;
+  background-position: center;
+}
+
+.perk2 {
+  background: url("https://vignette.wikia.nocookie.net/callofduty/images/7/7c/Juggernaut_icon.PNG/revision/latest/scale-to-width-down/64?cb=20100914090118");
+  background-size: cover;
+  background-position: center;
+}
+
+.perk3 {
+  background: url("https://vignette.wikia.nocookie.net/callofduty/images/6/63/DeepImpact.png/revision/latest?cb=20100720102201");
+  background-size: cover;
+  background-position: center;
+}
+
+.perk-tier {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.perk-tier:hover, .weapon-class:hover {
+  border: 2px solid #665b42;
+  cursor: pointer;
+}
+
+.weapon-class {
+  display: inline-block;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+.square {
+  padding: 4rem 7rem;
+  background: blue;
+  display: inline-block;
+}
+
+.layout {
+  display: inline-block;
+  margin-left: 20%;
+  width: 60%;
+}
+
+.main-square {
+  display: inline-block;
+  width: 50%;
+  line-height: .4rem;
+}
+
+.small-square {
+  padding: 4rem 2rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.primary-image {
+  background: url("https://cdn.shopify.com/s/files/1/0276/1899/products/AK-47-Assault-Rifle.jpg?v=1387091633");
+  background-position: center;
+  background-size: cover;
+  outline: 1px solid #665b42;
+}
+
+.secondary-image {
+  background: url("https://www.medieval-shop.co.uk/4099-large_default/colt-45-automatic-pistol-1911.jpg");
+  background-position: center;
+  background-size: cover;
+  outline: 1px solid #665b42;
+}
+</style></head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><div class="nav-links"><a class="main-link" href="http://localhost:3000/missions">Missions</a><a class="main-link" href="http://localhost:3000/soldier">Soldier</a><a class="main-link" href="http://localhost:3000/settings">Settings</a></div><div><div class="layout"><div class="main-square"><h5>Division</h5><h6>Infantry</h6><a class="square" href="http://localhost:3000/divisions"></a></div><div class="main-square"><h5>Primary</h5><h6>AK-47</h6><a class="square primary-image" href="http://localhost:3000/primary"></a></div><div class="main-square"><h5>Perks</h5><h6>Jugernut</h6><a class="small-square perk-image perk1" href="http://localhost:3000/perks"></a><a class="small-square perk-image perk2" href="http://localhost:3000/perks"></a><a class="small-square perk-image perk3" href="http://localhost:3000/perks"></a></div><div class="main-square"><h5>Secondary</h5><h6>Colt.45</h6><a class="square secondary-image" href="http://localhost:3000/secondary"></a></div></div><div class="soldier"><div class="user-tag"><img class="user-image" src="./React App_files/images"><h5 class="username">Quigley</h5></div><div class="user-level"><h5 class="level">&gt;&gt;Major I</h5><div class="stat-level">47</div><div class="stat-points">10300/12400</div><h5 class="level">&gt;&gt;Stat Snapshot</h5><div class="stats-wrapper"><div class="stats"><div class="stat-heading">Kills</div><div class="stat">400</div></div><div class="stats"><div class="stat-heading">Deaths</div><div class="stat">200</div></div><div class="stats"><div class="stat-heading">KDR</div><div class="stat">2.0</div></div><div class="stats"><div class="stat-heading">SPM</div><div class="stat">268</div></div><div class="stats"><div class="stat-heading">Hedshots</div><div class="stat">62</div></div><div class="stats"><div class="stat-heading">Time Played</div><div class="stat">6 h 23 m</div></div><div class="stats"><div class="stat-heading">Wins</div><div class="stat">35</div></div><div class="stats"><div class="stat-heading">Losses</div><div class="stat">13</div></div></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script type="text/javascript" src="./React App_files/bundle.js.download"></script>
+
+<script src="chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js"></script></body></html>
